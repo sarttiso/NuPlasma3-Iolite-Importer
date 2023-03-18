@@ -29,4 +29,4 @@ specification To accomplish this, search for `pytz.timezone` in the plugin code 
 your time zone. 
 
 ## To Do
--[] implement 
+- [ ] implement `correct_format()` to verify that `.csv` files are properly formatted

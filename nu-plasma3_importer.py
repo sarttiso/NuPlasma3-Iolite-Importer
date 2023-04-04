@@ -135,7 +135,7 @@ def match_nrf(nrf_name):
                         json file
     """
     # load nrf codes
-    nrf_codes_path = os.path.join(os.path.split(importer.pythonPath)[0], 'nrf_codes.json')
+    nrf_codes_path = os.path.join(os.path.split(importer.pythonPath)[0], 'nrf_codes_plasma3.json')
     with open(nrf_codes_path) as json_file:
         nrfs = json.load(json_file)['nrfs']
 

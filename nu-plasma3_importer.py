@@ -151,6 +151,6 @@ def match_nrf(nrf_name):
     detectors = [x.split('-')[0].rstrip() for x in nrf['columns']]
     masses  = [int(re.findall(r'\d+', x)[0]) for x in nrf['masses']]
     elements = [re.findall('[a-zA-Z]+', x)[0] for x in nrf['masses']]
-    datacols = [str(masses[ii])+elements[ii] for ii in range(len(masses))]
+    datacols = [elements[ii] + str(masses[ii]) for ii in range(len(masses))]
 
     return detectors, masses, elements, datacols

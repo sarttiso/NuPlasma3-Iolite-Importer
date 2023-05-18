@@ -13,6 +13,7 @@ import re
 import datetime as datetime
 import json
 import os
+import ntpath
 import re
 import pytz
 
@@ -59,7 +60,7 @@ def import_data():
                         nrows=1,
                         delimiter=',',
                         header=None).iloc[0, 1]
-    nrf_name = os.path.basename(nrf_path)
+    nrf_name = ntpath.basename(nrf_path)
     
     detectors, masses, elements, datacols = match_nrf(nrf_name)
     

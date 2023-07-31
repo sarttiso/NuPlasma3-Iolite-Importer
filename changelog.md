@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2 (2023-07-31)
+- rudimentary implementation of `correct_format()`
+
 ## 0.11 (2023-05-18)
 
 - updated `nrf_codes_plasma3.json` file for UCSB users

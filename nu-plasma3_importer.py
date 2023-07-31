@@ -3,7 +3,7 @@
 #/ Authors: Adrian Tasistro-Hart
 #/ Description: An importer for loading Nu Plasma .csv files from a plasma 3.
 #/ References: None
-#/ Version: 0.1
+#/ Version: 0.2
 #/ Contact: adrian at tasistro-hart.com
 
 import time
@@ -45,8 +45,21 @@ def correct_format():
 
     This method must return either True or False.
     """
+    _, ext = os.path.splitext(importer.fileName)
 
-    return True
+    if ext == '.csv':
+        # should read "Analysis Method"
+        test_str = pd.read_table(importer.fileName, 
+                    skiprows=7,
+                    nrows=1,
+                    delimiter=',',
+                    header=None).iloc[0, 0]
+        if test_str =='Analysis Method':
+            return True
+        else:
+            return False
+    else: 
+        return False
 
 def import_data():
     """

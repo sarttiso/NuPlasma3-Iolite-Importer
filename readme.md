@@ -27,6 +27,3 @@ This plugin, being geared towards UCSB users, assumes that the Nu Plasma3 timest
 in Pacific time. If that is not the case, you will want to change the time zone
 specification To accomplish this, search for `pytz.timezone` in the plugin code and change the argument to match
 your time zone. 
-
-## To Do
-- [ ] implement `correct_format()` to verify that `.csv` files are properly formatted

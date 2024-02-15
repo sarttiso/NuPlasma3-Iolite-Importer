@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+- added Sr H8.nrf configuration
+- permit half masses during import
+
 ## 0.2 (2023-07-31)
 - rudimentary implementation of `correct_format()`
 

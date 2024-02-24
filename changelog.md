@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.2
+- add "Machine Name" property to channels, fixes issue with datasyncer 
+
 ## 0.2.1
 - added Sr H8.nrf configuration
 - permit half masses during import

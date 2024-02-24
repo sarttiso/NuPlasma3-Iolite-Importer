@@ -3,7 +3,7 @@
 #/ Authors: Adrian Tasistro-Hart
 #/ Description: An importer for loading Nu Plasma .csv files from a plasma 3.
 #/ References: None
-#/ Version: 0.2.1
+#/ Version: 0.2.2
 #/ Contact: adrian at tasistro-hart.com
 
 import time
@@ -122,12 +122,14 @@ def import_data():
     # set time vector as index for dataframe (not actually necessary but oh well)
     run.set_index(time_vec, inplace=True)
         
+    # add channels to iolite
     for ii, mass in enumerate(masses):
         channel = data.createTimeSeries(
             datacols[ii], data.Input, time_vec_unix_epoch, run[datacols[ii]].values
         )
         channel.setProperty("Mass", mass)
         channel.setProperty("Units", "volts")
+        channel.setProperty("Machine Name", 'Nu Plasma 3')
 
     # Now calculate Total Beam:
     data.calculateTotalBeam()
